@@ -15,11 +15,11 @@
   width: 90%;
   height: 85vh;
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   overflow-y: scroll;
-  border: 1px solid white;
-  border-radius: 30px;
+  /* border: 1px solid white; */
+  /* border-radius: 30px; */
 }
 
 /* Hide scrollbar in webkit-based browsers */
