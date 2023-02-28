@@ -1,12 +1,13 @@
-import './App.css';
-import Navrbar from './Components/NavBar/Navrbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Product from './Components/Product/Product';
+
+import "./App.css";
+import Product from "./Components/Product/Product";
+// import Login from "./Pages/Login/Login";
+
 function App() {
   return (
     <div className="App">
-     <Navrbar/>
-     <Product/>
+      <Product />
+
     </div>
   );
 }
