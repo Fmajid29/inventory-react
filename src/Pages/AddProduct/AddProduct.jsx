@@ -7,7 +7,7 @@ const AddProduct = () => {
   const [productData, changeProductData] = useState({});
 
   function handlechange(e) {
-    changeLoginData((pre) => {
+    changeProductData((pre) => {
       return {
         ...pre,
         [e.target.name]: e.target.value,
