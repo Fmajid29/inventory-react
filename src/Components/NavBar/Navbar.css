@@ -1,25 +1,29 @@
 .MainNav {
-    color: #0093E9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2vh 3vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 3vh;
+}
+
+.MainNav > div > h1 {
+  font-family: "Audiowide", cursive;
 }
 
 #lgbtn {
-    margin-left: 3vh;
+  margin-left: 3vh;
 }
 
 #smAddbtn {
-    display: none;
+  display: none;
 }
 
-@media screen and (max-width:500px) {
-    #Addbtn {
-        display: none;
-    }
+@media screen and (max-width: 500px) {
+  #Addbtn {
+    display: none;
+  }
 
-    #smAddbtn {
-        display: inline ;
-    }
+  #smAddbtn {
+    display: inline;
+  }
 }
