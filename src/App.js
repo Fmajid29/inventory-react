@@ -2,13 +2,11 @@ import "./App.css";
 import AdminPanel from "./Pages/AdminPanel/AdminPanel";
 import Login from "./Pages/Login/Login";
 import AddProduct from "./Pages/AddProduct/AddProduct";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-
       {/* <Navrbar /> */}
       <Router>
         <Routes>
