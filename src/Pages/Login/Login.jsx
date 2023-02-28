@@ -7,7 +7,6 @@ const Login = () => {
   const [loginData, changeLoginData] = useState({});
 
   function handlechange(e) {
-    console.log(loginData.email);
     changeLoginData((pre) => {
       return {
         ...pre,
