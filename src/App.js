@@ -1,13 +1,14 @@
-
 import "./App.css";
 import Product from "./Components/Product/Product";
-// import Login from "./Pages/Login/Login";
+import AdminPanel from "./Pages/AdminPanel/AdminPanel";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
     <div className="App">
-      <Product />
-
+      {/* <Product /> */}
+      <AdminPanel />
+      {/* <Login /> */}
     </div>
   );
 }
