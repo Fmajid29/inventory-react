@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Login = () => {
   const [loginData, changeLoginData] = useState({});
@@ -34,7 +36,9 @@ const Login = () => {
             onChange={handlechange}
             value={loginData.password}
           />
-          <button>Login</button>
+          <Link to="/adminpanel">
+            <Button>Login</Button>
+          </Link>
         </div>
       </div>
     </div>
