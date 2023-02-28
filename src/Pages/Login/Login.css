@@ -73,7 +73,7 @@
 @media screen and (max-width: 800px) {
   .loginform {
     height: 70vh;
-    width: 95%;
+    width: 90%;
     flex-direction: column;
     padding: 3% 0;
   }
