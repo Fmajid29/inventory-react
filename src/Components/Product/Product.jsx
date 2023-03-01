@@ -18,7 +18,7 @@ const Product = (props) => {
         <Button id="minusbutton">-</Button>
         <input
           type="text"
-          placeholder="enter quatity"
+          placeholder="enter quantity"
           value={qty}
           onChange={handleqty}
         />

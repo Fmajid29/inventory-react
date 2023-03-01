@@ -40,6 +40,9 @@
   .mainDiv {
     width: 100%;
   }
+  .quantity {
+    width: 80%;
+  }
   .quantity > input {
     height: 60%;
     font-size: 1.5rem;

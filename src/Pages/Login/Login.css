@@ -1,7 +1,7 @@
 ::placeholder {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-indent: 3%;
-  color: white;
+  color: rgba(255, 255, 255, 0.496);
 }
 
 .login {
@@ -37,7 +37,6 @@
 .inputform {
   width: 55%;
   height: 70%;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -46,7 +45,6 @@
 
 .inputform > h1 {
   font-size: 4rem;
-  /* color: white; */
   font-family: "Audiowide", cursive;
 }
 
@@ -55,7 +53,7 @@
   height: 10%;
   border-radius: 12px;
   border: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-indent: 3%;
   background-color: rgba(5, 5, 71, 0.5);
   color: white;

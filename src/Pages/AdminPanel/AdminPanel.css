@@ -19,16 +19,42 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   overflow-y: scroll;
-  /* border: 1px solid white; */
-  /* border-radius: 30px; */
 }
 
-/* Hide scrollbar in webkit-based browsers */
+/* For Webkit browsers (Safari, Chrome, etc.) */
 ::-webkit-scrollbar {
-  display: none;
+  width: 15px; /* width of the scrollbar */
 }
 
-/* Hide scrollbar in Firefox */
-::-moz-scrollbar {
-  display: none;
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.496); /* color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(9, 9, 121, 0.5); /* color of the thumb */
+  border-radius: 5px; /* rounded corners */
+  border: none; /* border around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* color of the thumb on hover */
+}
+
+/* For Firefox */
+scrollbar {
+  width: 10px; /* width of the scrollbar */
+}
+
+scrollbar-track {
+  background: rgba(255, 255, 255, 0.496); /* color of the track */
+}
+
+scrollbar-thumb {
+  background-color: rgb(9, 9, 121, 0.5); /* color of the thumb */
+  border-radius: 5px; /* rounded corners */
+  border: none; /* border around the thumb */
+}
+
+scrollbar-thumb:hover {
+  background-color: #555; /* color of the thumb on hover */
 }
