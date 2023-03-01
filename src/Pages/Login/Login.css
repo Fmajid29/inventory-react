@@ -70,6 +70,10 @@
   border-radius: 12px;
 }
 
+#lgnbtn {
+  background-color: rgb(9, 9, 121, 0.5);
+}
+
 @media screen and (max-width: 800px) {
   .loginform {
     height: 70vh;

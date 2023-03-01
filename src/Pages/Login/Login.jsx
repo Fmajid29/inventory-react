@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [loginData, changeLoginData] = useState({});
 
   function handlechange(e) {
@@ -13,6 +14,10 @@ const Login = () => {
         [e.target.name]: e.target.value,
       };
     });
+  }
+
+  function handleLogin() {
+    navigate("/adminpanel");
   }
 
   return (
@@ -35,9 +40,9 @@ const Login = () => {
             onChange={handlechange}
             value={loginData.password}
           />
-          <Link to="/adminpanel">
-            <Button>Login</Button>
-          </Link>
+          <Button onClick={handleLogin} id="lgnbtn">
+            Login
+          </Button>
         </div>
       </div>
     </div>

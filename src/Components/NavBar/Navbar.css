@@ -12,6 +12,7 @@
 
 #lgbtn {
   margin-left: 3vh;
+  background-color: rgb(9, 9, 121, 0.5);
 }
 
 #smAddbtn {
@@ -25,5 +26,6 @@
 
   #smAddbtn {
     display: inline;
+    background-color: rgb(9, 9, 121, 0.5);
   }
 }

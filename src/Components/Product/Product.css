@@ -36,6 +36,11 @@
   background-color: rgba(5, 5, 71, 0.5);
 }
 
+#minusbutton,
+#plusbutton {
+  background-color: rgb(9, 9, 121, 0.5);
+}
+
 @media screen and (max-width: 800px) {
   .mainDiv {
     width: 100%;
