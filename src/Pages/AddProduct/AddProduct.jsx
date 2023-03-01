@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import Navbar from "../../Components/NavBar/Navrbar";
 import "./Addproduct.css";
+import { db } from "../../firebaseconfig";
+import { collection, addDoc } from "firebase/firestore";
+import { useNavigate } from "react-router";
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   const [productData, changeProductData] = useState({});
+  const collectionref = collection(db, "products");
 
   function handlechange(e) {
     changeProductData((pre) => {
@@ -13,6 +18,18 @@ const AddProduct = () => {
         [e.target.name]: e.target.value,
       };
     });
+  }
+
+  function addProduct() {
+    addDoc(collectionref, {
+      name: productData.name,
+      price: productData.price,
+      qty: productData.qty,
+    })
+      .then(navigate("/adminpanel"))
+      .catch(() => {
+        alert("error adding product");
+      });
   }
 
   return (
@@ -41,7 +58,9 @@ const AddProduct = () => {
           value={productData.qty}
         />
 
-        <Button id="submitbtn">SUBMIT</Button>
+        <Button id="submitbtn" onClick={addProduct}>
+          SUBMIT
+        </Button>
       </div>
     </div>
   );

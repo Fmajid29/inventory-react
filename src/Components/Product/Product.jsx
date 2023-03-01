@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import "./Product.css";
 import { Button } from "react-bootstrap";
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../../firebaseconfig";
 
 const Product = (props) => {
   const [qty, changeqty] = useState();
+
   function handleqty(e) {
     if (!isNaN(e.target.value)) {
       changeqty(e.target.value);
     }
   }
+
+  function handleDelete() {
+    deleteDoc(doc(db, "products", props.id));
+  }
+
   return (
     <div className="mainDiv">
       <h1>{props.name}</h1>
@@ -22,7 +30,9 @@ const Product = (props) => {
           value={qty}
           onChange={handleqty}
         />
-        <Button id="plusbutton">+</Button>
+        <Button id="plusbutton" onClick={handleDelete}>
+          +
+        </Button>
       </div>
     </div>
   );
