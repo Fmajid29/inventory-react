@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Product.css";
 import { Button } from "react-bootstrap";
-import { doc, deleteDoc } from "firebase/firestore";
+import { doc, deleteDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebaseconfig";
 
 const Product = (props) => {
@@ -17,6 +17,29 @@ const Product = (props) => {
     deleteDoc(doc(db, "products", props.id));
   }
 
+  function handleAdd() {
+    let currentqty = Number(props.qty) + Number(qty);
+    const docToUpdate = doc(db, "products", props.id);
+    updateDoc(docToUpdate, {
+      name: props.name,
+      price: props.price,
+      qty: currentqty,
+    });
+  }
+  function handleMinus() {
+    let currentqty = Number(props.qty) - Number(qty);
+    if (currentqty < 0) {
+      alert("less then 0 quantity not possible");
+      return;
+    }
+    const docToUpdate = doc(db, "products", props.id);
+    updateDoc(docToUpdate, {
+      name: props.name,
+      price: props.price,
+      qty: currentqty,
+    });
+  }
+
   return (
     <div className="mainDiv">
       <div className="cross">
@@ -28,14 +51,18 @@ const Product = (props) => {
       <h3>Rs {props.price}</h3>
       <h3>{props.qty} pcs</h3>
       <div className="quantity">
-        <Button id="minusbutton">-</Button>
+        <Button id="minusbutton" onClick={handleMinus}>
+          -
+        </Button>
         <input
           type="text"
           placeholder="enter quantity"
           value={qty}
           onChange={handleqty}
         />
-        <Button id="plusbutton">+</Button>
+        <Button id="plusbutton" onClick={handleAdd}>
+          +
+        </Button>
       </div>
     </div>
   );
