@@ -49,4 +49,4 @@ This will create a build folder with the compiled code that can be uploaded to y
 
 ## Demo
 
-A live demo of the application can be found at [app](https://your-app-url.com)
+A live demo of the application can be found at [app](https://Fmajid29.github.io/inventory-react)
