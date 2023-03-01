@@ -49,8 +49,4 @@ This will create a build folder with the compiled code that can be uploaded to y
 
 ## Demo
 
-A live demo of the application can be found at [https://your-app-url.com](https://your-app-url.com)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+A live demo of the application can be found at [app](https://your-app-url.com)
