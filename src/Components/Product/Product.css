@@ -32,6 +32,8 @@
   border-radius: 8px;
   text-align: center;
   border: none;
+  color: white;
+  background-color: rgba(5, 5, 71, 0.5);
 }
 
 @media screen and (max-width: 800px) {
