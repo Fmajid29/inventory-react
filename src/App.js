@@ -3,9 +3,10 @@ import AdminPanel from "./Pages/AdminPanel/AdminPanel";
 import Login from "./Pages/Login/Login";
 import AddProduct from "./Pages/AddProduct/AddProduct";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { app, db } from "./firebaseconfig";
+import { app } from "./firebaseconfig";
 
 function App() {
+  console.log(app);
   return (
     <div className="App">
       <Router>
