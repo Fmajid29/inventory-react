@@ -19,7 +19,12 @@ const Product = (props) => {
 
   return (
     <div className="mainDiv">
-      <h1>{props.name}</h1>
+      <div className="cross">
+        <h1>{props.name}</h1>
+        <Button className="btn btn-danger" onClick={handleDelete}>
+          X
+        </Button>
+      </div>
       <h3>Rs {props.price}</h3>
       <h3>{props.qty} pcs</h3>
       <div className="quantity">
@@ -30,9 +35,7 @@ const Product = (props) => {
           value={qty}
           onChange={handleqty}
         />
-        <Button id="plusbutton" onClick={handleDelete}>
-          +
-        </Button>
+        <Button id="plusbutton">+</Button>
       </div>
     </div>
   );

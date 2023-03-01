@@ -27,7 +27,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.496); /* color of the track */
+  background: transparent; /* color of the track */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -46,7 +46,7 @@ scrollbar {
 }
 
 scrollbar-track {
-  background: rgba(255, 255, 255, 0.496); /* color of the track */
+  background: transparent; /* color of the track */
 }
 
 scrollbar-thumb {
