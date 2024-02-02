@@ -41,7 +41,7 @@ const Login = () => {
         <div className="inputform">
           <h1>TREW</h1>
           <input
-            type="text"
+            type="password"
             placeholder="Email"
             name="email"
             value={loginData.email}
